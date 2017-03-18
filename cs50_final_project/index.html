@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CS50 Final Project: Wes Basinger</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://wesbasinger.github.io">Back to Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="https://github.com/wesbasinger/classroom-counter">See the source on Github</a>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h1>this is CS50</h1>
+                <h2>Final Project: Google Classroom Assignment Counter</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="results.png">
+            <h2 class="featurette-heading">Integrating IOT with Education
+                <span class="text-muted">Connecting the Virtual to the Physical</span>
+            </h2>
+            <p class="lead">
+              I have enjoyed taking CS50 quite a bit.  I started the class over the Christmas break, and
+              have it mostly finished by Spring Break.  Writing C code gave me a appreciation for the high
+              level languages I had been previously aquainted with.  To put it in perspective, I spent about
+              two weeks trying to learn how to implement linked lists and hash tables.  Concurrent with my
+              interest in CS50 was my interest in IOT technology.  I watched every TED talk I could find on
+              the subject and decided I wanted to do something along that flavor for my final project.  I
+              already had two Raspberry Pis laying around.  After some brainstorming, I narrowed my ideas
+              down to the three most feasible and floated a survey to my colearners, coworkers, and students.
+              Here are the results.
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="terminal.png">
+            <h2 class="featurette-heading">Integrating with Google APIs
+                <span class="text-muted">Easier than you think</span>
+            </h2>
+            <p class="lead">
+              Google APIs are incredibly easy to use and they are documented very well.  I've always used
+              the Classroom API to make importing grades easy, so, it was fairly simply to copy the
+              <a href="https://developers.google.com/classroom/quickstart/python">Python Quickstart</a> and
+              extend my code from that example.  The <a href="https://github.com/wesbasinger/classroom-counter">code</a>
+              is pretty simple.  Basically, I use a pip installed library to do the Oauth dirty work.  The libary
+              makes GET requests on my behalf, and I just have to substitute parameters into the provided functions.
+              I'm only getting last updated time and status for the last 500 assignments for whatever course I query.
+              Results come back as a list of Python dictionaries.  There's a couple of counter variables and more code
+              to interface with the 7 segment LED (more on that later).  The whole thing runs in a while loop, because
+              I have 2,000,000 request per day to play with.  Don't think I can hit that...
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="final.jpeg">
+            <h2 class="featurette-heading">And Finally...
+                <span class="text-muted">The semi finished product.</span>
+            </h2>
+            <p class="lead">
+              The physical interface is a Raspberry Pi with a 7 segment LED and a buzzer.  The 7 segment LED
+              is driven with just two pins from the GPIO.  I'm using a serial data cable and a clock cable,
+              the pins are part of the RaspPi's i2c interface and Adrafuit provided a library that takes care
+              of multiplexing the LED's.  All I have to do is send an argument to a <code>print_number_str()</code>
+              function.  The LED runs on 5V, which comes from the Pi, so if I have wifi, I can do everything with
+              one power cable coming out of the box.  Functional testing seems to indicate it's going to work,
+              and my students have already remarked that it is "cool".  The cover is a custom laser etched design
+              that I did myself. 
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Wes Basinger 2017 Creative Commons License</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

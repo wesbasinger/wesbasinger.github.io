@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Monilla</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+	<a href="https://github.com/wesbasinger/monilla">See Source on Github</a>
+    <h1>Monilla</h1>
+    <div id="graphics">
+      <canvas id="canvas" width="512" height="512" style="border:1px solid #000000;"></canvas>
+    </div>
+    <div id="ui">
+      <div id="msg-box">
+        <p id="messages">Roll the Dice to get started!</p>
+      </div>
+      <button id="roll-dice">Roll Dice</button>
+      <h3>Balance: $<span id="current-balance"></span></h3>
+      <h3>Net Worth: $<span id="net-worth">40000</span></h3>
+      <h4>Investment Accounts</h4>
+      <table>
+        <thead>
+          <tr>
+            <td> </td>
+            <td>Sea</td>
+            <td>Land</td>
+            <td>Air</td>
+            <td>Rail</td>
+            <td>Hotel</td>
+            <td>House</td>
+            <td>Office</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amount Invested</td>
+            <td id="sea-amount">0</td>
+            <td id="land-amount">0</td>
+            <td id="air-amount">0</td>
+            <td id="rail-amount">0</td>
+            <td id="hotel-amount">0</td>
+            <td id="house-amount">0</td>
+            <td id="office-amount">0</td>
+          </tr>
+          <tr>
+            <td>Return Interest Rate</td>
+            <td id="sea-rate">0</td>
+            <td id="land-rate">0</td>
+            <td id="air-rate">0</td>
+            <td id="rail-rate">0</td>
+            <td id="hotel-rate">0</td>
+            <td id="house-rate">0</td>
+            <td id="office-rate">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="user-decision-box">
+      </div>
+    </div>
+    <button onClick="handleShowHideClick()">Show Instructions</button>
+    <div id="instructions" style="visibility: hidden;">
+      <p>
+        Roll the dice and read the messages.  It's not that hard.  Try to get net worth to a million.
+      </p>
+    </div>
+    <script>
+      var handleShowHideClick = function() {
+        var el = document.getElementById('instructions');
+        if (el.style.visibility === 'hidden') {
+          el.style.visibility = 'visible';
+        } else {
+          el.style.visibility = 'hidden';
+        }
+      }
+    </script>
+  </body>
+  <script src="bundle.js"></script>
+</html>

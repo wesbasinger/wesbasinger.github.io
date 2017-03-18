@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon"
+      type="image/png"
+      href="favicon.png">
+
+    <title>Wes Basinger | Project Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Wes Basinger | Project Page</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="log-project/index.html">Log and Exponent Reflection Student Pages</a>
+                    </li>
+                    <li>
+                        <a href="cs50_final_project/index.html">CS50 Final Project</a>
+                    </li>
+                    <li>
+                        <a href="http://github.com/wesbasinger">See my Github Page</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Recent Projects
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                  <img width=700 height="300" class="img-responsive" src="twitter-guess.png" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>Guess the Twitter User Game</h3>
+                <h4>A React app, backended by Express.  Implements the Twitter API.
+                </h4>
+                <p>
+                  I've noticed that my students on occasion will try to guess the originating
+                  user of each tweet on a timeline.  Through my most recent foibles, I had created
+                  a Python app that hit my home timeline, filtered only my students and returned some
+                  JSON.  I had been wanting to work with React again, so I refactored everything into
+                  Javascript and built a nice little front end interface for it.
+                </p>
+                <a class="btn btn-primary" href="http://vt-twitter.herokuapp.com">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                  <img width=700 height="300" class="img-responsive" src="newplot.png" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>Google Classroom Completion Graph</h3>
+                <h4>An Express app with Plotly.js functionality, backended by a Google
+                    Apps Script web app.
+                </h4>
+                <p>
+                  Data has become extremely important to me lately in my coding studies,
+                  but I've been using Pandas along with the Juypter Notebook and Matplotlib
+                  to create my visualizations.  It's super easy and fast, but, I wanted to get
+                  back to JS a little bit, so for this project I levereaged Plotly.js to create
+                  a line chart comparing completion percentage for my two classes.  The graphing part was
+                  easy, it was making the backend on Google Apps Script that was super hard.
+                  I still need to hook up an update route.
+                </p>
+                <a class="btn btn-primary" href="http://gc-completion-rate.herokuapp.com">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                  <img width=700 height="300" class="img-responsive" src="pythagoras-theorem.gif" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>Triple Check</h3>
+                <h4>A Product of Create React App: a bootstrapping solution for React.</h4>
+                <p>
+                  After some time away, I really wanted to get back into React and review
+                  all the basics.  So, I created a tiny little math game.  I think it could
+                  be pretty useful for quizzing over the Pythagorean Triples.  Of course those
+                  are very useful :-)  I'd like to add styling at some point, but once again,
+                  that's not what I particulary enjoy.
+                </p>
+                <a class="btn btn-primary" href="triplecheck/index.html">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <a href="http://connect-for.herokuapp.com/">
+                    <img width=700 height="300" class="img-responsive" src="connect4.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Connect 4</h3>
+                <h4>Another Socket IO and React Game</h4>
+                <p>
+                  This project was a follow up to my rock paper scissors game.
+                  I really enjoyed working with events in Socket IO and wanted
+                  to do a lot more with my React interface.  This also utilizes
+                  the react router.  The major improvement over the rock paper scissors
+                  server is using rooms instead a list, so the server can host more than
+                  one game at a time and players can join the game they want, as
+                  opposed to get getting the next random player.  The logic is rough,
+                  I did quite a few vanilla Javascript projects after this to get
+                  better with that.
+                </p>
+                <a class="btn btn-primary" href="http://connect-for.herokuapp.com/">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="maze.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Maze</h3>
+                <h4>Another HTML Canvas Game</h4>
+                <p>
+                  This project was all about leveraging a multidimensional array
+                  to predict collisions with walls and targets.  Previously I used
+                  the distance formula, but found checking array values to immensely
+                  easier for something that is so simple.  This is probably one of my
+                  favorite projects.  I left it alone for a little while, and came back
+                  to finish it up.
+                </p>
+                <a class="btn btn-primary" href="maze/index.html">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Project Four -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="monilla.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Monilla</h3>
+                <h4>Single Player Simplified Version of Monopoly</h4>
+                <p>
+				  This was the first app written without a framework.  It
+				  is done in vanilla Javascript.  I didn't even use jQuery!
+				  I did this project to help myself understand the language better,
+				  especially objects and the "this" keyword.  I also was able to utilize
+				  some mocha unit testing with the chai assert framework.  This was made
+				  possible by separating the UI from the game logic.  Functionality is
+				  tied together by emitter events.  Also, notice use of the canvas element
+				  to provide the game graphics.  Admittedly, look and feel is not my strong
+				  point... yet :-)
+                </p>
+                <a class="btn btn-primary" href="monilla/index.html">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="quizbe.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Quiz Site</h3>
+                <h4>Educational</h4>
+                <p>
+                  This was originally done with EJS rendered template views,
+                  but I have recently refactored it into a single page app with
+                  React Router.  It still needs major styling improvements, but
+                  it is ready for use in the next school year.  I will be able to
+                  add quizzes via a command line interface, students will be able to
+                  view and take the most recent and active quizzes.  It gives instant
+                  feedback and the ability to delete low grades, since the primary
+                  purpose is to give them rapid feedback.  If you want to peek about use
+                  these credentials.
+                </p>
+                <p>Email: dummy@dummy.net</p>
+                <p>Password: dummy</p>
+                <a class="btn btn-primary" href="http://quizbe.herokuapp.com">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="rowshambo.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Rock Paper Scissors</h3>
+                <h4>Just For Fun</h4>
+                <p>
+                  I used React and Socket IO in this project.  Originally, all
+                  the UI was done with jQuery, but then I refactored it into a React
+                  app.  Open two tabs to play :-)
+                </p>
+                <a class="btn btn-primary" href="http://rowshambo.herokuapp.com">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="pvcache.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>School Geocaching</h3>
+                <h4>First Live Web App</h4>
+                <p>
+                  The first web app I did was written with Django.  I wrote it in order
+                  to faciliate an elective class at school, where kids searched the
+                  campus for hidden geocaches according to coordinates listed on the website.
+                  It was pretty much like a blog, with posts and comments.  It had one added
+                  feature, which was the ability to generate a GPX file for the geocache, which
+                  is just a XML document.  This site is no longer live.
+                </p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Wes Basinger 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
