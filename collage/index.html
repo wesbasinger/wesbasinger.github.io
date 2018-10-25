@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Transformation Collages</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Transformation Collages</h1>
+    <h2>Instructions</h2>
+    <p>Set parameters and then start clicking on the blank canvas.</p>
+    <canvas
+    width="400"
+    height="400"
+    style="border:solid"></canvas>
+    <br />
+    <label for="shape">Pick Shape</label>
+    <select id="shape" name="shape">
+      <option value=""></option>
+      <option value="square">Square</option>
+      <option value="circle">Circle</option>
+      <option value="triangle">Triangle</option>
+    </select>
+    <label for="primary-color">Pick Primary Color</label>
+    <select id="primary-color" name="primary-color">
+      <option value=""></option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+      <option value="aqua">Aqua</option>
+      <option value="gold">Gold</option>
+      <option value="indigo">Indigo</option>
+      <option value="magenta">Magenta</option>
+      <option value="navy">Navy</option>
+      <option value="plum">Plum</option>
+    </select>
+    <label for="secondary-color">Pick Secondary Color</label>
+    <select id="secondary-color" name="secondary-color">
+      <option value=""></option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+      <option value="aqua">Aqua</option>
+      <option value="gold">Gold</option>
+      <option value="indigo">Indigo</option>
+      <option value="magenta">Magenta</option>
+      <option value="navy">Navy</option>
+      <option value="plum">Plum</option>
+    </select>
+    <br />
+    <label for="horizontal-offset">Horizonal Offset</label>
+    <input id="horizontal-offset" type="number" min="-20" max="20" />
+    <label for="vertical-offset">Vertical Offset</label>
+    <input id="vertical-offset" type="number" min="-20" max="20" />
+    <br />
+    <button>Clear Canvas</button>
+    <p><small>Made with love by your favorite Geometry teacher. 🤓</small></p>
+    <script src="script.js"></script>
+  </body>
+</html>
