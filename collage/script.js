@@ -57,7 +57,7 @@ const drawCircle = (x, y) => {
   ctx.fill();
 
   ctx.beginPath();
-  ctx.arc(x + settings.horizontalOffset, y + settings.horizontalOffset, 10, 0, 2*Math.PI);
+  ctx.arc(x + settings.horizontalOffset, y + settings.verticalOffset, 10, 0, 2*Math.PI);
   ctx.fillStyle = settings.secondaryColor;
   ctx.fill();
 
