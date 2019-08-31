@@ -1,3 +1,31 @@
+const getRemainingMinutes = () => {
+
+	const date = new Date();
+
+	const hours = date.getHours();
+
+	const minutes = date.getMinutes();
+
+	if(hours > 15) {
+    return 0;
+	} else if (hours === 15 && minutes > 30) {
+    return 0;
+  } else {
+    const hoursRemaining = 15 - hours;
+    const minutesRemaining = 60 - minutes;
+
+    return hoursRemaining*60 + minutesRemaining;
+  }
+}
+
+const updateMinutesRemaining = () => {
+  const span = document.querySelector("span");
+
+  span.innerText = getRemainingMinutes();
+}
+
+setInterval(updateMinutesRemaining(), 30000);
+
 const directionRequestObject = {
     origin: "1114 Explorer St Duncanville TX 75137",
     destination: "Rockwall Texas",
@@ -72,6 +100,7 @@ function initMap() {
 
   initMap()
   calcRoute()
+  updateMinutesRemaining();
 
   const updateDistance = (distance) => {
 
