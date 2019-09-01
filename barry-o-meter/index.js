@@ -24,7 +24,10 @@ const updateMinutesRemaining = () => {
   span.innerText = getRemainingMinutes();
 }
 
-setInterval(updateMinutesRemaining(), 30000);
+setInterval(() => {
+  updateMinutesRemaining();
+  console.log("fired set interval");
+}, 30000);
 
 const directionRequestObject = {
     origin: "1114 Explorer St Duncanville TX 75137",
